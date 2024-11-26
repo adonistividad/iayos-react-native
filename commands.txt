@@ -1,2 +1,68 @@
+React Native Course for Beginners in 2024 | Build a Full Stack React Native App
+https://www.youtube.com/watch?v=ZBCUegTZF7M
+
 npx create-expo-app ./
 npx expo install expo-router react-native-safe-area-context react-native-screens expo-linking expo-constants expo-status-bar
+
+npx expo start -c
+
+
+https://www.nativewind.dev/getting-started/expo-router
+yarn add nativewind tailwindcss react-native-reanimated react-native-safe-area-context
+npx tailwindcss init
+
+
+---------------------------------------------------------------
+tailwind.config.js
+===============================================================
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  // NOTE: Update this to include the paths to all of your component files.
+  content: ["./app/**/*.{js,jsx,ts,tsx}"],
+  presets: [require("nativewind/preset")],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+---------------------------------------------------------------
+global.css
+===============================================================
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+---------------------------------------------------------------
+babel.config.js
+===============================================================
+module.exports = function (api) {
+  api.cache(true);
+  return {
+    presets: [
+      ["babel-preset-expo", { jsxImportSource: "nativewind" }],
+      "nativewind/babel",
+    ],
+  };
+};
+
+---------------------------------------------------------------
+metro.config.js
+===============================================================
+const { getDefaultConfig } = require("expo/metro-config");
+const { withNativeWind } = require("nativewind/metro");
+
+const config = getDefaultConfig(__dirname);
+
+module.exports = withNativeWind(config, { input: "./global.css" });
+
+
+---------------------------------------------------------------
+app/_layout.js
+===============================================================
+import { Slot } from "expo-router";
+
+// Import your global CSS file
+import "../global.css";
+
+export default Slot;
