@@ -8,7 +8,7 @@ const Post = () => {
     <SafeAreaView className="flex-1 items-center justify-center bg-dark">
       <Text className="color-white">Post</Text>
       <StatusBar style="auto" />
-      <Link href={"/"} style={{ color: "blue" }}>
+      <Link href={"/home"} style={{ color: "blue" }}>
         Go to Home
       </Link>
     </SafeAreaView>

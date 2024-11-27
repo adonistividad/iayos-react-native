@@ -3,18 +3,18 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-const Profile = () => {
+const Home = () => {
   return (
     <SafeAreaView className="flex-1 items-center justify-center bg-dark">
-      <Text className="color-white">Profile</Text>
+      <Text className="color-primary text-3xl  font-pblack">Home</Text>
       <StatusBar style="auto" />
-      <Link href={"/home"} style={{ color: "blue" }}>
-        Go to Home
+      <Link href={"/profile"} className="color-blue-200" >
+        Go to Profile
       </Link>
     </SafeAreaView>
   );
 };
 
-export default Profile;
+export default Home;
 
 const styles = StyleSheet.create({});
