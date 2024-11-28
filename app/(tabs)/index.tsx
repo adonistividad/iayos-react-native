@@ -1,3 +1,4 @@
+import FormField from "@/components/FormField";
 import { Link } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
@@ -11,6 +12,11 @@ const Home = () => {
       <Link href={"/profile"} className="color-blue-200" >
         Go to Profile
       </Link>
+ 
+      <Link href={"/sign-in"} className="color-blue-200" >
+        Sign In
+      </Link>
+ 
     </SafeAreaView>
   );
 };
