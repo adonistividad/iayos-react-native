@@ -8,8 +8,11 @@ const Home = () => {
     <SafeAreaView className="flex-1 items-center justify-center bg-dark">
       <Text className="color-primary text-3xl  font-pblack">Home</Text>
       <StatusBar style="auto" />
-      <Link href={"/profile"} className="color-blue-200" >
+      <Link href={"/profile"} className="color-blue-200">
         Go to Profile
+      </Link>
+      <Link href={"/sign-in"} className="color-blue-500">
+        Sign In
       </Link>
     </SafeAreaView>
   );
