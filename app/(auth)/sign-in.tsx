@@ -11,7 +11,7 @@ const SignIn = () => {
   });
   return (
     <SafeAreaView className="flex-1 items-center justify-center bg-white dark:bg-black">
- 
+
       <Text className="color-primary text-3xl  font-pblack">Sign In</Text>
       <StatusBar style="auto" />
       <FormField
@@ -21,6 +21,16 @@ const SignIn = () => {
         otherStyles="mt-7"
         keyboardType="email-address"
       />
+
+      <FormField
+        title="Password"
+        value={form.password}
+        handleChangeText={(e) => setForm({ ...form, password: e })}
+        otherStyles="mt-7"
+      />
+
+
+
       <br />
       <Link href={"/"} className="color-blue-500">
         Home
