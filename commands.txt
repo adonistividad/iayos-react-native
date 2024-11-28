@@ -66,3 +66,8 @@ import { Slot } from "expo-router";
 import "../global.css";
 
 export default Slot;
+
+
+
+Great Expo template - Expo Router v3 & Nativewind v4
+https://www.youtube.com/watch?v=RsFoOlYj-gc
