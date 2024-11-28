@@ -10,7 +10,7 @@ const Home = () => {
   console.log("colorScheme::", colorScheme)
 
   return (
-    <SafeAreaView className="flex-1 items-center justify-center bg-light dark:bg-dark">
+    <SafeAreaView className="flex-1 items-center justify-center bg-white dark:bg-black">
       <Text className="color-primary text-3xl  font-pblack">Home</Text>
       <StatusBar style="auto" />
       <Link href={"/profile"} className="color-blue-200">
