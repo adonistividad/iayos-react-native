@@ -5,8 +5,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 const Profile = () => {
   return (
-    <SafeAreaView className="flex-1 items-center justify-center bg-dark">
-      <Text className="color-white">Profile</Text>
+     <SafeAreaView className="flex-1 items-center justify-center bg-white dark:bg-black">      <Text className="color-white">Profile</Text>
       <StatusBar style="auto" />
       <Link href={"/"} style={{ color: "blue" }}>
         Go to Home

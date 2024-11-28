@@ -10,10 +10,10 @@ const SignIn = () => {
     password: "",
   });
   return (
-    <SafeAreaView className="flex-1 items-center justify-center bg-dark">
+    <SafeAreaView className="flex-1 items-center justify-center bg-white dark:bg-black">
+ 
       <Text className="color-primary text-3xl  font-pblack">Sign In</Text>
       <StatusBar style="auto" />
-
       <FormField
         title="Email"
         value={form.email}
@@ -21,9 +21,8 @@ const SignIn = () => {
         otherStyles="mt-7"
         keyboardType="email-address"
       />
-
       <br />
-    <Link href={"/"} className="color-blue-500">
+      <Link href={"/"} className="color-blue-500">
         Home
       </Link>
       <Link href={"/sign-up"} className="color-blue-500">

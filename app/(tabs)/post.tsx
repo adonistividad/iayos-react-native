@@ -5,8 +5,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 const Post = () => {
   return (
-    <SafeAreaView className="flex-1 items-center justify-center bg-dark">
-      <Text className="color-white">Post</Text>
+     <SafeAreaView className="flex-1 items-center justify-center bg-white dark:bg-black">      <Text className="color-white">Post</Text>
       <StatusBar style="auto" />
       <Link href={"/"} style={{ color: "blue" }}>
         Go to Home
