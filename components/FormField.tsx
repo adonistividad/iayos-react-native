@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   Image,
   TextInputProps,
+  useColorScheme,
 } from "react-native";
 
 import { icons } from "../constants";
@@ -27,6 +28,8 @@ const FormField = ({
   ...props
 }: FormFieldProps) => {
   const [showPassword, setShowPassword] = useState(false);
+  const colorScheme = useColorScheme(); // Detect light or dark mode
+  const isDarkMode = colorScheme === "dark";
 
   return (
     <View className={`space-y-2 ${otherStyles}`}>
@@ -34,10 +37,11 @@ const FormField = ({
 
       <View className="w-full h-16 px-4 bg-black-100 rounded-2xl border-solid border-2 border-blue-100 focus:border-secondary flex flex-row items-center">
         <TextInput
-          className="flex-1   color-white font-psemibold text-base border-orange-700"
+          // className={`w-4/5 p-4 text-base rounded-lg border-2 ${isDarkMode ? "bg-gray-800 text-white border-gray-700" : "bg-white text-black border-gray-300"}`}
+          className="p-4 text-base rounded-lg border-2 bg-gray-800 text-white border-gray-700"
           value={value}
           placeholder={placeholder}
-          placeholderTextColor="#7B7B8B" 
+          placeholderTextColor={isDarkMode ? "#ccc" : "#555"}
           onChangeText={handleChangeText}
           secureTextEntry={title === "Password" && !showPassword}
           {...props}
